@@ -1,0 +1,201 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --desaturated-red: hsl(0, 36%, 70%);
+    --soft-red: hsl(0, 93%, 68%);
+    --dark-greyish-red: hsl(0, 6%, 24%);
+    font-family: 'Josefin Sans';
+    font-size: 16px;
+}
+
+html {
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    max-width: 100%;
+    margin: 0;
+}
+
+main {
+    margin-bottom: 2rem;
+}
+
+nav {
+    padding: 20px;
+}
+
+#logo {
+    height: 20px;
+    margin: auto 0px;
+}
+
+.hero-img {
+    width: 100%;
+}
+
+#desktop-img {
+    display: none;
+}
+
+.subscribe-contents {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+}
+
+h1 {
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: var(--dark-greyish-red);
+    letter-spacing: 0.7rem;
+    margin-top: 3rem;
+    margin-bottom: 0;
+}
+
+span {
+    font-weight: 300;
+    color: var(--desaturated-red);
+}
+
+p {
+    color: var(--desaturated-red);
+    line-height: 1.3rem;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+}
+
+.email-form {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+}
+
+input {
+    padding: 15px 20px 16px;
+    font-family: 'Josefin Sans';
+    border-radius: 25px;
+    border: 1px solid var(--desaturated-red);
+    width: 100%;
+    transition: 0.1s;
+}
+
+input::placeholder {
+    color: var(--desaturated-red);
+    opacity: 0.5;
+}
+
+input:focus {
+    outline: none;
+}
+
+input:invalid {
+    border: none;
+    outline: 2px solid red;
+}
+
+button {
+    border: none;
+    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    position: absolute;
+    right: 0px;
+    padding: 10px 24px 10px 28px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    box-shadow: 0px 8px 10px hsla(0, 36%, 70%, 0.4);
+}
+
+button:active {
+    background-image: linear-gradient(135deg, hsl(356, 71%, 92%), hsl(357, 68%, 86%));
+}
+
+.button-img {
+    margin-top: 2px;
+}
+
+#error-icon {
+    position: absolute;
+    margin: auto;
+    top: 10px;
+    right: 76px;
+    display: none;
+}
+
+@media screen and (min-width: 735px){
+    body {
+        height: 100vh;
+    }
+    
+    main {
+        height: 100%;
+        margin: 0;
+    }
+    
+    #full-container {
+        display: flex;
+        flex-direction: row-reverse;
+        height: 100%;
+    }
+
+    #img-container {
+        height: 100%;
+        width: 50%;
+    }
+
+    #desktop-img {
+        display: block;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    #mobile-img {
+        display: none;
+    }
+
+    #contents-container {
+        background-image: url(images/bg-pattern-desktop.svg);
+    }
+
+    nav {
+        padding: 20px 0px;
+        width: 50%;
+        margin: auto;
+    }
+
+    #logo {
+        height: 30px;
+        margin-top: 50px;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    p {
+        margin-bottom: 2rem;
+        line-height: 1.5rem;
+    }
+
+    .subscribe-contents {
+        text-align: start;
+        width: 50%;
+        margin: 30px auto;
+    }
+
+    button {
+        padding: 10px 35px 10px 39px;
+    }
+
+    footer {
+        display: none;
+    }
+}
