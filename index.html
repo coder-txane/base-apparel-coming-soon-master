@@ -34,10 +34,12 @@
           <p>Hello fellow shoppers! We're currently building our new fashion store. 
           Add your email below to stay up-to-date with announcements and our launch deals.</p>
           
-          <div class="email-form">
-            <input type="email" placeholder="Email Address">
+          <div class="email-form" action="submit">
+            <input type="email" placeholder="Email Address" class="email-input">
             <img src="images/icon-error.svg" id="error-icon">
-            <button><img class="button-img" src="images/icon-arrow.svg"></button>
+            <button type="submit"><img class="button-img" src="images/icon-arrow.svg"></button>
+            <p class="invalid-email-message email-message"></p>
+            <p class="empty-email-message email-message"></p>
           </div>
         </section>
       </div>
@@ -50,5 +52,6 @@
       Coded by <a href="#">Toané</a>.
     </p>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
